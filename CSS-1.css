@@ -574,9 +574,10 @@ a {
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-  .service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  .service-img {
+  width: 100%;
+  height: 160px;        /* ← 高さを固定 */
+  object-fit: cover;    /* ← はみ出た部分をトリミング */
+  border-radius: 12px;
 }
 }
