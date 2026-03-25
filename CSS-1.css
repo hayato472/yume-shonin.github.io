@@ -246,8 +246,15 @@ a {
     radial-gradient(circle at 80% 20%, rgba(255, 74, 46, 0.09), transparent 30%);
 }
 
-.service-grid {
-  grid-template-columns: repeat(3, 1fr);
+ .service-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.service-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
 .service-card {
@@ -286,19 +293,24 @@ a {
   margin-bottom: 40px;
 }
 
-.latest-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+.container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
 }
 
-.latest-card,
-.archive-card {
-  overflow: hidden;
-  border-radius: 22px;
-  border: 1px solid rgba(255, 107, 87, 0.18);
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+.service-grid,
+.latest-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.service-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
 .latest-card img,
@@ -580,4 +592,5 @@ a {
   object-fit: cover;    /* ← はみ出た部分をトリミング */
   border-radius: 12px;
 }
+  
 }
